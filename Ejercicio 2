@@ -7,8 +7,4 @@ def multiplo(entrada):
 def discriminar(valor):
     return valor > 0
 
-
-lista = [0,1,2,3,4,5,6,7,8,9,10]
-resultado = list(map(multiplo, lista))
-final = tuple(filter( discriminar, resultado))
-print(final)
+print(tuple(filter(discriminar,list(map(multiplo,[0,1,2,3,4,5,6,7,8,9,10])))))
