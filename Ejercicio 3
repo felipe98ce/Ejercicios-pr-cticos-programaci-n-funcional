@@ -1,0 +1,13 @@
+def pareja(lista):
+    if lista == []:
+        return []
+    return [(may(lista[0]), men(lista[0]),
+            may(lista[0]) + men(lista[0]))] + pareja(lista[1:])
+
+def may(lista):
+    return max(lista)
+
+def men(lista):
+    return min(lista)
+
+print(pareja([[1,3,5,10], [6, 2, 8, 9]]))
