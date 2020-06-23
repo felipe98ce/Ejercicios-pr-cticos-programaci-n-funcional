@@ -1,0 +1,14 @@
+from functools import reduce
+
+def descom(valor):
+    return valor % 10
+
+
+def sumador(acumulador=0, elemento=0):
+    return acumulador + elemento
+
+lista = [13,25,27,29,41,85,1029]
+
+listado = list(map(descom,lista))
+resultado = reduce(sumador, listado)
+print(resultado)
