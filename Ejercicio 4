@@ -1,0 +1,12 @@
+class Nodo():
+	def __init__(self, valor, izq= None, der = None):
+		self.valor = valor 
+		self.izq = izq
+		self.der = der
+		
+def ord(arbol):
+	if arbol == None:
+		return []
+	return ord(arbol.izq) + [arbol.valor] + ord(arbol.der)
+	
+arbol = Nodo(31,Nodo(21, None, Nodo (35)), Nodo(78))
